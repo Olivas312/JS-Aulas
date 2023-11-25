@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Salario Familia</title>
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
     <link rel="stylesheet" href="AtividadeSalarioFamilia/styles/styles.css">
 </head>
 <body>
@@ -22,37 +25,88 @@
             <div class="conteudo">
                 <div class="inputUsuario">
                     <form action="AtividadeSalarioFamilia/scripts/script.js" method="post">
-                        <div id="input-empregado">
-                            <label for=""></label>
-                            <input type="text">                          
+                        <div class="capsulaDeInputs">
+                        
+                            <div id="input-empregado">
+                        
+                                <label for="iempregado"></label>
+                                <input type="text" placeholder="Empregado" id="iempregado">
+                            </div>
+                            <div id="input-qtd-filhos-e-ou-invalidos">
+                        
+                                <label for="iQF-I"></label>
+                                <input type="text" placeholder="Quantdade de filhos menores de 14 anos ou Invaldos" id="iQF-I">
+                                    <div id="contador1">
+                                    <span id="iUp1" style="background-color: gray;" class="material-symbols-outlined botaoParaCima contador">
+                                        keyboard_arrow_up
+                                    </span>
+                                    <span id="iDown1" style="background-color: gray;" class="material-symbols-outlined botaoParaBaixo ">
+                                        keyboard_arrow_down
+                                    </span>
+                                    </div>
+                            </inout>
+                            </div>
+                            <div id="input-salario-contribuicao">
+                        
+                                <label for="iSC"></label>
+                                <input type="text" placeholder="Sálario Contrbução" id="iSC">
+                                    <div id="contador2">
+                                    <span id="iUp2" style="background-color: gray;" class="material-symbols-outlined botaoParaCima contador">
+                                        keyboard_arrow_up
+                                    </span>
+                                    <span id="iDown2" style="background-color: gray;" class="material-symbols-outlined botaoParaBaixo">
+                                        keyboard_arrow_down
+                                    </span>
+                                    </div>
+                            </inout>
+                            </div>
+
                         </div>
-                        <div id="input-qtd-filhos-e-ou-invalidos">
-                            <label for=""></label>
-                            <input type="text">                          
-                        </div>
-                        <div id="input-salario-contribuicao">
-                            <label for=""></label>
-                            <input type="text">                          
-                        </div>
+
                     </form>
                 </div>
             <div class="tablaReferencia">
                 <div id="tabelaBase">
-                    <table>
-                        <tr>
-                            <th>Nome</th>
-                            <td>Rodrigo</td>
-                            <td></td>
-                         </tr>
-                         <tr>
-                            <th>Numero</th>
-                            <td>619294058</td>
-                            <td></td>
-                         </tr>
+                    <table id="baseDoCalculo" style="border-collapse: collapse;">
+                        
+                        <thead>
+                            
+                            <tr width="100%">
+                                <th width="50%" colspan="1">Salaro Contribução</th>
+                                <th width="50%" colspan="1">Cota do Saláro Famlia</th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody>
+                            
+                            <tr>
+                                <td>Até R$ 806,80</td>
+                                <td>R$41,37 por filho</td>
+                            </tr>
+
+                            <tr>
+                                <td colspan="1" rowspan="1">Entre R$806,81 e R$1.212,64</td>
+                                <td colspan="1" rowspan="1">R$29,16 por filho</td>
+                            </tr>
+
+                            <tr>
+                                <td>Mas de R$1.212,64</td>
+                                <td>Não Há</td>
+                            </tr>
+                        </tbody>
 
                     </table>
                 </div>
              </div>
+            </div>
+            <div class="botaoCalcular">
+                <input
+                 type="button" 
+                 value="Calcular"
+                 id="botaoCalcularSalario"                
+                 >
+                 
             </div>
         </main>
         <footer></footer>
