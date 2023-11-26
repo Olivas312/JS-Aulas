@@ -1,0 +1,36 @@
+@media screen and ( max-width: 600px ) and ( min-width:320px ) {
+    .capsulaDeInpunts{
+        box-sizing: border-box !important;
+    } 
+    #contador1{
+        color:red;
+
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+/* 
+        position: relative;
+        top: 2rem;
+        left: 9rem; */
+        
+    }
+    #contador2{
+        color: red;
+
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+/* 
+        position: absolute;
+        top: 20.9rem; 
+        left: 31.9rem; */
+      
+    }
+    #iempregado,#iQF-I,#iSC{
+        width: 15.5rem;
+        height: 2.55rem;
+    }
+
+}

@@ -27,7 +27,7 @@ header>div>figure>img{
 .inputUsuario>form>.capsulaDeInputs{
     width: 100%;
 }
-#input-empregado,#input-qtd-filhos-e-ou-invalidos,#input-salario-contribuicao{
+#input-empregado{
     width: 100%;
 }
 #iempregado,#iQF-I,#iSC{
@@ -81,19 +81,19 @@ th{
     align-items: center;
 }
 .botaoParaCima, .botaoParaBaixo{
-    width: 1px;
-    height: .5px;
+    width: 1.4rem;
+    height: .7rem;
+    text-align: center;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.input-com-contador{
+    display: flex;
+    flex-flow: row wrap;
+}
+#input-qtd-filhos-e-ou-invalidos,#input-salario-contribuicao{
+    width: 90%;
 }
 
-#contador1{
-    position: absolute;
-    top: 18rem;
-    left: 31.9rem;
-    background-color: gray;
-}
-#contador2{
-    position: absolute;
-    top: 20.5rem; 
-    left: 31.9rem;
-    background-color: gray;
-}
