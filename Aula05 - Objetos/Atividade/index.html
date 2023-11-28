@@ -4,8 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        main, form{
+            width: 80%;
+            margin: 0 auto;
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: center;
+            align-items: center;
+        }
+        input{
+            width: 100%;            
+        }
+        .post{
+            width: 200px;
+            height: 200px;
+            background-color: bisque;
+            border-radius: 5px;
+
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+    </style>
 </head>
 <body>
+    <main>
+        <h1>Crie Seu Carro</h1>
+            <form>
+                <div>
+                    <label for="marca">Marca Do Seu Carro</label>
+                    <input type="text" id="marca">
+                </div>
+
+                <div>
+                    <label for="modelo">Modelo Do Seu Carro</label>
+                    <input type="text" id="modelo">
+                </div>
+
+                <div>
+                    <label for="ano">Ano do Seu Carro</label>
+                    <input type="date" id="ano">
+                </div>
+
+                <div>
+                    <label for="color">Cor do Seu carro</label>
+                    <input type="color" id="color">
+                </div>
+
+                <div>
+                    <label for="velocidadeMax">Velocidade Maxima</label>
+                    <input type="number" id="velocidadeMax">
+                </div>
+
+                <div>
+                    <input type="button" id="btnCarro" value="Criar o Carro">
+                </div>
+            </form>
+            <div id="resposta"></div>
+    </main>
     <script src="js/script.js"></script>
 </body>
 </html>
