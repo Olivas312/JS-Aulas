@@ -8,3 +8,15 @@ main{
     height: 60%;
     margin: 0 auto;
 }
+.inputCaixa{
+    display: flex;
+    flex-flow: column wrap;   
+}
+label{
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: slateblue;
+}
+#flm-nome,#flm-categoria,#flm-descricao,#flm-data,#flm-diretor{
+    border-radius: 2px;
+}
