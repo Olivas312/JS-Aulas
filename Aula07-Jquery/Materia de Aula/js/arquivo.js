@@ -1,21 +1,34 @@
-//  Seletor Jquery = $(# ou . elemento)
-var titulo = $('#tituloDaPagina').text('JQUERY aula')
+// INSTALAÇÃO
+// VISITE https://jquery.com/download/
+// clicar na opção "Download the uncompressed, development jQuery 3.7.1"
+// aberto o arquivo, aperte com o botão direito e salvar página como.. e salve em um local de sua preferencia!
 
-var subtitulo = $('#subtituloDaPagina').on('mouseover', function(){
-    console.log('Esse é o texto da pagina')
-})
+// SELETOR JQUERY = $(# OU . ELEMENTO)
+var titulo = $("#tituloDaPagina").text("jquery aula");
+console.log(titulo);
 
-//  Comportamento
-// Jquery te a capacidade de avaliar valores não definidos e vazios
+// var paragrafo = document.querySelector("#textoDaPagina");
+// paragrafo.addEventListener("mouseover", consoleListar)
+// function consoleListar(){
+//     console.log("Este é o texto do site");
+// }
 
+var paragrafo = $("#textoDaPagina").on("mouseover", function(){
+    console.log("Este é o texto do site");
+});
 
-// algoritimo de contagem de caracteres 
+//comportamento
+//jquery tem capacidade de avaliar valores não definidos e vazios
+var usuario = "Victor";
+var usuarioIndefinido = undefined;
 
-var texto = $('#blocoDeTexto').on('input', function(){
-    let bloco = $('#blocoDeTexto').value;
-    let caracteres = $('#numCaracteres')
+var usuarioResultado = $("#testeIndefinido").text(usuarioIndefinido);
 
-    var contagem = bloco.length;
+//algoritmo contagem de caracteres
+var blocoDeTexto = $("#blocoDeTexto").on("input", function(){
+    let blocoDeTextoValue = $("#blocoDeTexto").val();
+    let resposta = $("#numCaracteres");
 
-    caracteres.text(contagem);
-})
+    var contagem = blocoDeTextoValue.length;
+    resposta.text(contagem); 
+});

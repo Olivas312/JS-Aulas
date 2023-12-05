@@ -1,42 +1,52 @@
-// Replace - Replace All
+// REPLACE / REPLACEALL
+var frase = "Olá mundo, o mundo é muito legal";
+console.log(frase);
 
-var frase = " A vingança nunca e plena, mata a alma e envenena"
+console.log(frase.replace("mundo","bacana"));
+console.log(frase.replaceAll("mundo","bacana"));
 
-console.log(frase)
-//  no metodo repleace ele busca 1 o termo utilisado dentro do parentese na primeira posição e subtitue pelo segundo termo
-cosolelog(frase.replace('nunca','sempre'))
-// no metodo repleace ele busca TODOS os termos utilisados dentro do parentese na primeira posição e subtitue pelo segundo termo
-cosolelog(frase.replace('sempre','nunca'))
+// SETATTRIBUTE
+document.querySelector("span").setAttribute("style","color: blue ;");
 
-
-//  SetAtribute
-// com o set atribute voce passa o atributo que voce quer alterar e qual o valor dele seguindo esse padrao
-document.querySelector('span').setAttribute('style',"color: blue;");
-
-// Class list
-//  Com esse metodo ele remove uma classe declarada
-document.querySelector("#classList").classList.remove('claro');
-//  com esse metodo ele adiciona uma classe 
-document.querySelector("#classList").classList.add('claro');
-
-var elemento = document.querySelector("#classList")
-// Com esse metodo ele subtitue a classe mas com referencia do elemento pai
-if(elemento.classList.contains('claro')){
-    elemento.classList.toggle('escuro')
+//CLASS LIST
+document.querySelector("#classlist").classList.remove("claro");
+document.querySelector("#classlist").classList.add("claro");
+var elemento = document.querySelector("#classlist");
+// contains se contem a classe
+// toggle troca de classe
+if(elemento.classList.contains("claro")){
+    // elemento.classList.toggle("escuro");
+    elemento.classList.replace("claro","escuro");
 }
 
-// Set timeout
+//index of / includes
+var frutas = ['Morango','Banana','Laranja','Uva']
 
-function msg(x){
-    return new Promise ((teste)=>{
+// includes -> true e false
+console.log(frutas.includes("Abacaxi"));
+// indexOf -> o valor indice do array (caso não exista, -1)
+console.log(frutas.indexOf("Abacaxi"));
+
+if(frutas.includes("Abacaxi" == false)){
+    console.log("Não achei")
+}
+
+//SET TIMEOUT
+function msg(){
+    //PROMISE - SE ASSEMELHA A UMA FUNÇÃO, PORÉM ELE CONFIGURA SUCESSO E ERRO
+    return new Promise ((resolve) => {
         setTimeout(() => {
-            console.log('Bom Dia !')
-        }, 2000);
-       teste(x)
+            console.log("Bom dia!");
+            resolve()
+        }, 5000);
+        
     })
 }
+
 async function carregando(){
-    console.log('iniciou')
+    console.log("iniciou");
     await msg();
-    console.log('Seja Bem Vindo')
+    console.log("Seja bem vindo");
 }
+
+carregando();

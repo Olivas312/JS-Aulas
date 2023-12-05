@@ -4,15 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Atividade Jquery</title>
+    <style>
+        .temaClaro{
+            background-color: rgb(175, 183, 190);
+            color: black;
+            transition: 0.5s;
+
+        }
+        .temaEscuro{
+            background-color:black;
+            color:  rgb(175, 183, 190);
+            transition: 0.5s;
+
+        }
+    </style>
 </head>
-<body>
+<body class="temaClaro">
     <main>
+        <div>
+            <button type="button" id="trocaTema" class="temaClaro">Tema Escuro</button>
+        </div>
+        <hr>
         <form>
-            <input type="number" id="numUsuario" placeholder="Insira seu número de 1 - 10">
-            <button type="button" id="calcular">Mostrar a Tabuada</button>
+            <div>            
+                <input type="number" id="numUsuario" placeholder="Insira um número de 1-10" max="10" min="1">
+                <button type="button" id="calcular">Mostrar a Tabuada</button>
+            </div>
         </form>
+
+        <div id="resultado"></div>
+
     </main>
+
     <script src="../jquery-3.7.1.js"></script>
     <script src="arquivo.js"></script>
+    <script src="arquivo02.js"></script>
 </body>
 </html>

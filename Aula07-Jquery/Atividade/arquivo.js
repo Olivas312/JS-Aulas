@@ -1,14 +1,11 @@
-var numero = $('#numUsuario').on('input', function(){
-    let btncalcular = $('#btnCalcular')
-    if(numero !== 0){
-    var multiplicador = 0;
-    while(multiplicador<=10){
-    multiplicador++
-    var resultado = numero * multiplicador
-    console.log(`${numero} x ${multiplicador} = ${resultado}`)
+
+$('#calcular').on('click', function(){
+  let numero =Number( $('#numUsuario').val());
+  var multiplicador = 0;
+    while(multiplicador<10){
+      multiplicador++;
+      var resultado = numero * multiplicador;
+
+      document.querySelector('#resultado').innerHTML += (`${numero} x ${multiplicador} = ${resultado}<br>`)
     }
-   }else{
-    alert('Insira um numero valido')
-   }
-  }
-)
+ });
