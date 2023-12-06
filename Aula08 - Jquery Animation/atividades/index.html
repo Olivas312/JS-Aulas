@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery animation Atividade</title>
+    <style>
+        .centralizar{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .esquerda{
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+
+        #caixote{
+            width: 80px; 
+            height:25px;
+            background-color: black;
+            border-radius: 60%;
+
+            flex-flow: row wrap;
+        }
+
+        #caixa{
+            width: 80%;
+            border-radius: 80%;
+            background-image: url(image/ceuDia.png);
+
+
+        }
+        #troca{
+            height: 20px;
+            border-radius: 100%;
+            background-image: url(image/sol.png);
+        }
+    </style>
+</head>
+<body>
+
+
+<div id="caixote" class="centralizar">
+    <div id="caixa"  class="esquerda">
+        <button type="button" id="troca"></button>
+    </div>
+</div>
+
+
+    <script src="../../Aula07-Jquery/jquery-3.7.1.js"></script>
+    <script src="aquivo.js"></script>
+</body>
+</html>
