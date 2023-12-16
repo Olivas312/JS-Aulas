@@ -4,7 +4,7 @@
 // confirm('Bom dia , o dia esta bom ? ');
 // prompt('Qual e a sua idade?');
 
-console.log(' Olha que legal !');
+// console.log(' Olha que legal !');
 
 //variaveis
 
